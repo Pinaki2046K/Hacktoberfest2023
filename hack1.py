@@ -1,0 +1,10 @@
+import numpy as np
+A= np.array([[2,1,-1],[1,1,-2],[-1,-2,1]])
+eigenvalues,eigenvectors=np.linalg.eig(A)
+print("Eigenvalues:")
+print(eigenvalues)
+print("Eigenvectors")
+print(eigenvectors)
+matrix=np.dot(eigenvectors,np.diag(eigenvalues),np.linalg.inv(eigenvectors))
+print("Matrix:")
+print(matrix)
